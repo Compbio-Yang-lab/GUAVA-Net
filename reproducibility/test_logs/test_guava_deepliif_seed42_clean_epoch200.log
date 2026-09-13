@@ -1,0 +1,862 @@
+/home/yang/anaconda3/envs/deepliif_env/lib/python3.9/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.8 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+organize weights: done
+----------------- Options ---------------
+             aspect_ratio: 1.0                           
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: ./checkpoints/guava_deepliif_seed42_clean_eval200/latest
+           continue_train: False                         
+                crop_size: 512                           
+                 dataroot: /home/yang/Desktop/Model_Nov12th.3/Model/Dataset
+             dataset_mode: aligned                       
+                    debug: False                         
+          debug_data_size: 10                            
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: -1                            
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 512                           
+                    epoch: latest                        
+              epoch_count: 0                             
+                 gan_mode: vanilla                       
+               gan_mode_s: lsgan                         
+                  gpu_ids: (0,)                          
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                 input_no: 1                             
+                 is_train: False                         
+          label_smoothing: 0.0                           
+                lambda_L1: 100                           
+              lambda_feat: 100                           
+          lambda_identity: 0                             
+                lambda_l1: 100.0                         
+                load_iter: 0                             
+                load_size: 512                           
+               local_rank: -1                            
+           loss_D_weights: [0.25, 0.25, 0.25, 0.25]      
+           loss_G_weights: [0.25, 0.25, 0.25, 0.25]      
+           loss_weights_d:                               
+           loss_weights_g:                               
+                     lr_d: 0.0002                        
+           lr_decay_iters: 50                            
+                     lr_g: 0.0002                        
+                lr_policy: linear                        
+         max_dataset_size: None                          
+            modalities_no: 4                             
+                    model: ParsiLIF                      
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+               n_layers_D: 4                             
+               n_layers_d: 4                             
+                     name: .                             
+                      ndf: 32                            
+                     netD: n_layers                      
+                     netG: ['resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks']
+                    net_d: n_layers                      
+                   net_ds: n_layers                      
+                    net_g: ['resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks']
+                   net_gs: ['unet_512', 'unet_512', 'unet_512', 'unet_512', 'unet_512']
+                      ngf: 32                            
+               no_dropout: False                         
+                  no_flip: True                          
+                  no_html: True                          
+                     norm: batch                         
+                 num_test: 598                           
+              num_threads: 0                             
+                optimizer: adam                          
+                output_nc: 3                             
+                  padding: zero                          
+                    phase: test                          
+                pool_size: 0                             
+              prep_config: {'seg_no': 1, 'seg_gen': True, 'gpu_ids': [0], 'local_rank': -1, 'padding': 'zero', 'input_no': 1, 'scale_size': 512, 'pool_size': 0, 'net_g': ['resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks'], 'net_gs': ['unet_512', 'unet_512', 'unet_512', 'unet_512', 'unet_512'], 'seg_weights': [0.25, 0.25, 0.25, 0.25], 'loss_G_weights': [0.25, 0.25, 0.25, 0.25], 'loss_D_weights': [0.25, 0.25, 0.25, 0.25], 'lambda_identity': 0}
+               preprocess: None                          
+               print_freq: 50                            
+                   remote: False                         
+      remote_transfer_cmd: None                          
+              results_dir: /home/yang/Desktop/Model_Nov12th.3/Model/Dataset_pred_guava_deepliif_seed42_clean_eval200
+             save_by_iter: False                         
+          save_epoch_freq: 10                            
+         save_latest_freq: 500                           
+               scale_size: 512                           
+                     seed: 42                            
+                  seg_gen: True                          
+                   seg_no: 1                             
+              seg_weights: [0.25, 0.25, 0.25, 0.25]      
+                  seghead: unet_swt                      
+           serial_batches: True                          
+         update_html_freq: 50                            
+                 upsample: convtranspose                 
+                   use_dp: True                          
+              use_dropout: False                         
+                  verbose: False                         
+                 with_val: False                         
+----------------- End -------------------
+dataset [AlignedDataset] was created
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+model [ParsiLIFModel] was created
+loading the model from ./checkpoints/guava_deepliif_seed42_clean_eval200/latest/./latest_net_G1.pth
+loading the model from ./checkpoints/guava_deepliif_seed42_clean_eval200/latest/./latest_net_G2.pth
+loading the model from ./checkpoints/guava_deepliif_seed42_clean_eval200/latest/./latest_net_G3.pth
+loading the model from ./checkpoints/guava_deepliif_seed42_clean_eval200/latest/./latest_net_G4.pth
+loading the model from ./checkpoints/guava_deepliif_seed42_clean_eval200/latest/./latest_net_S.pth
+---------- Networks initialized -------------
+[Network G1] Total number of parameters : 1.967 M
+[Network G2] Total number of parameters : 1.967 M
+[Network G3] Total number of parameters : 1.967 M
+[Network G4] Total number of parameters : 1.967 M
+[Network S] Total number of parameters : 6.759 M
+-----------------------------------------------
+creating web directory /home/yang/Desktop/Model_Nov12th.3/Model/Dataset_pred_guava_deepliif_seed42_clean_eval200/./test_latest
+processing (0000)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_38000_0_2.png']
+processing (0005)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_38000_2_3.png']
+processing (0010)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_40000_0_1.png']
+processing (0015)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_40000_1_3.png']
+processing (0020)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_40000_3_0.png']
+processing (0025)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_42000_0_2.png']
+processing (0030)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_42000_2_0.png']
+processing (0035)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_46000_0_0.png']
+processing (0040)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_46000_1_1.png']
+processing (0045)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_38000_46000_2_3.png']
+processing (0050)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_56000_0_1.png']
+processing (0055)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_56000_1_3.png']
+processing (0060)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_56000_3_0.png']
+processing (0065)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_62000_0_2.png']
+processing (0070)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_62000_2_1.png']
+processing (0075)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_62000_3_3.png']
+processing (0080)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_68000_1_0.png']
+processing (0085)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_68000_3_0.png']
+processing (0090)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_72000_0_3.png']
+processing (0095)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_72000_2_1.png']
+processing (0100)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_74000_0_0.png']
+processing (0105)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_74000_1_2.png']
+processing (0110)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_74000_3_1.png']
+processing (0115)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_78000_0_3.png']
+processing (0120)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Bladder_48000_78000_2_2.png']
+processing (0125)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_28000_0_0.png']
+processing (0130)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_28000_1_3.png']
+processing (0135)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_28000_3_2.png']
+processing (0140)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_30000_1_1.png']
+processing (0145)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_30000_2_2.png']
+processing (0150)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_32000_0_0.png']
+processing (0155)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_32000_2_0.png']
+processing (0160)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_32000_3_1.png']
+processing (0165)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_34000_0_2.png']
+processing (0170)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_34000_2_1.png']
+processing (0175)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_34000_3_3.png']
+processing (0180)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_36000_1_1.png']
+processing (0185)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_36000_3_2.png']
+processing (0190)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_38000_0_3.png']
+processing (0195)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_38000_3_1.png']
+processing (0200)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_40000_0_2.png']
+processing (0205)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_40000_2_2.png']
+processing (0210)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_40000_3_3.png']
+processing (0215)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_42000_1_1.png']
+processing (0220)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_42000_2_2.png']
+processing (0225)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_42000_3_3.png']
+processing (0230)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_44000_1_0.png']
+processing (0235)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_26000_44000_2_3.png']
+processing (0240)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_14000_0_2.png']
+processing (0245)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_14000_2_0.png']
+processing (0250)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_14000_3_3.png']
+processing (0255)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_16000_1_0.png']
+processing (0260)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_16000_2_3.png']
+processing (0265)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_18000_0_0.png']
+processing (0270)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_18000_2_0.png']
+processing (0275)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_18000_3_2.png']
+processing (0280)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_20000_1_0.png']
+processing (0285)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_20000_3_0.png']
+processing (0290)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_22000_0_1.png']
+processing (0295)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_22000_1_2.png']
+processing (0300)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_22000_2_3.png']
+processing (0305)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_24000_0_2.png']
+processing (0310)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_24000_1_3.png']
+processing (0315)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_24000_3_3.png']
+processing (0320)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_26000_1_0.png']
+processing (0325)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_26000_2_2.png']
+processing (0330)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_28000_0_0.png']
+processing (0335)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_28000_1_1.png']
+processing (0340)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_28000_2_2.png']
+processing (0345)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_28000_3_3.png']
+processing (0350)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_30000_1_2.png']
+processing (0355)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_30000_3_1.png']
+processing (0360)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_32000_0_2.png']
+processing (0365)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_32000_2_1.png']
+processing (0370)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_34000_0_0.png']
+processing (0375)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_34000_1_3.png']
+processing (0380)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_34000_3_2.png']
+processing (0385)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_36000_1_0.png']
+processing (0390)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_36000_2_1.png']
+processing (0395)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_40000_0_1.png']
+processing (0400)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_40000_1_3.png']
+processing (0405)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_40000_3_3.png']
+processing (0410)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_42000_1_3.png']
+processing (0415)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_42000_3_1.png']
+processing (0420)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_44000_1_0.png']
+processing (0425)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_28000_44000_2_3.png']
+processing (0430)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_30000_40000_0_0.png']
+processing (0435)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_30000_40000_1_3.png']
+processing (0440)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_30000_40000_3_1.png']
+processing (0445)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_32000_0_2.png']
+processing (0450)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_32000_1_3.png']
+processing (0455)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_32000_3_1.png']
+processing (0460)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_34000_1_0.png']
+processing (0465)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_34000_3_1.png']
+processing (0470)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_36000_0_2.png']
+processing (0475)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_36000_2_0.png']
+processing (0480)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_40000_0_0.png']
+processing (0485)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_40000_1_1.png']
+processing (0490)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_32000_40000_2_2.png']
+processing (0495)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_26000_0_0.png']
+processing (0500)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_26000_1_1.png']
+processing (0505)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_26000_2_2.png']
+processing (0510)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_32000_0_0.png']
+processing (0515)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_32000_1_3.png']
+processing (0520)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_32000_3_0.png']
+processing (0525)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_34000_0_3.png']
+processing (0530)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_34000_2_2.png']
+processing (0535)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_40000_0_0.png']
+processing (0540)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_40000_2_1.png']
+processing (0545)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_34000_40000_3_3.png']
+processing (0550)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_32000_2_0.png']
+processing (0555)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_32000_3_2.png']
+processing (0560)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_34000_1_0.png']
+processing (0565)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_34000_2_2.png']
+processing (0570)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_38000_0_0.png']
+processing (0575)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_38000_1_3.png']
+processing (0580)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_38000_3_0.png']
+processing (0585)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_42000_0_1.png']
+processing (0590)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_42000_1_2.png']
+processing (0595)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/Lung_36000_42000_3_0.png']
+[✓] Lung_34000_32000_3_1: 52 cells, 2 positive
+[✓] Lung_32000_32000_0_2: 33 cells, 7 positive
+[✓] Lung_32000_32000_2_3: 47 cells, 6 positive
+[✓] Lung_28000_22000_3_1: 45 cells, 6 positive
+[✓] Lung_34000_34000_1_0: 51 cells, 2 positive
+[✓] Bladder_48000_72000_2_0: 45 cells, 8 positive
+[✓] Lung_32000_36000_2_2: 63 cells, 5 positive
+[✓] Bladder_48000_62000_2_3: 70 cells, 5 positive
+[✓] Lung_28000_42000_1_2: 33 cells, 3 positive
+[✓] Lung_28000_14000_2_0: 38 cells, 2 positive
+[✓] Bladder_48000_74000_3_3: 71 cells, 14 positive
+[✓] Lung_28000_32000_0_2: 43 cells, 2 positive
+[✓] Lung_36000_42000_1_0: 39 cells, 8 positive
+[✓] Bladder_38000_42000_2_3: 51 cells, 4 positive
+[✓] Lung_36000_42000_3_0: 56 cells, 7 positive
+[✓] Lung_32000_34000_2_2: 37 cells, 3 positive
+[✓] Lung_34000_32000_2_3: 50 cells, 3 positive
+[✓] Lung_26000_44000_2_3: 48 cells, 2 positive
+[✓] Lung_26000_32000_2_1: 47 cells, 2 positive
+[✓] Lung_28000_18000_0_0: 59 cells, 7 positive
+[✓] Lung_28000_36000_3_3: 57 cells, 12 positive
+[✓] Lung_26000_34000_2_2: 40 cells, 3 positive
+[✓] Bladder_48000_78000_3_2: 56 cells, 15 positive
+[✓] Bladder_38000_46000_0_3: 88 cells, 8 positive
+[✓] Bladder_48000_62000_2_2: 61 cells, 7 positive
+[✓] Lung_28000_30000_0_3: 50 cells, 4 positive
+[✓] Lung_28000_32000_1_2: 51 cells, 5 positive
+[✓] Lung_26000_28000_3_0: 45 cells, 4 positive
+[✓] Lung_28000_36000_0_1: 43 cells, 8 positive
+[✓] Lung_28000_44000_1_1: 54 cells, 17 positive
+[✓] Lung_26000_42000_1_1: 46 cells, 8 positive
+[✓] Bladder_48000_72000_3_2: 48 cells, 14 positive
+[✓] Bladder_48000_56000_1_1: 109 cells, 15 positive
+[✓] Lung_26000_30000_2_3: 58 cells, 22 positive
+[✓] Lung_34000_26000_1_2: 46 cells, 5 positive
+[✓] Lung_26000_32000_3_2: 49 cells, 2 positive
+[✓] Lung_32000_32000_0_0: 59 cells, 2 positive
+[✓] Lung_34000_34000_3_1: 58 cells, 3 positive
+[✓] Bladder_48000_68000_2_2: 51 cells, 6 positive
+[✓] Lung_28000_42000_2_2: 51 cells, 10 positive
+[✓] Bladder_48000_56000_3_1: 71 cells, 3 positive
+[✓] Lung_28000_26000_0_0: 39 cells, 10 positive
+[✓] Lung_32000_34000_3_1: 63 cells, 5 positive
+[✓] Lung_26000_44000_3_3: 55 cells, 26 positive
+[✓] Bladder_38000_38000_3_2: 51 cells, 15 positive
+[✓] Lung_28000_16000_1_1: 31 cells, 3 positive
+[✓] Lung_26000_36000_2_2: 64 cells, 5 positive
+[✓] Lung_28000_44000_3_0: 53 cells, 1 positive
+[✓] Lung_28000_44000_0_1: 62 cells, 9 positive
+[✓] Lung_34000_26000_0_3: 46 cells, 16 positive
+[✓] Lung_28000_24000_0_2: 43 cells, 11 positive
+[✓] Bladder_48000_56000_1_0: 62 cells, 1 positive
+[✓] Lung_32000_36000_3_1: 49 cells, 7 positive
+[✓] Lung_32000_40000_3_1: 50 cells, 8 positive
+[✓] Lung_36000_38000_2_3: 60 cells, 4 positive
+[✓] Lung_28000_28000_2_0: 55 cells, 36 positive
+[✓] Lung_28000_40000_2_3: 52 cells, 1 positive
+[✓] Bladder_48000_74000_3_2: 65 cells, 8 positive
+[✓] Lung_26000_28000_2_1: 59 cells, 5 positive
+[✓] Lung_26000_34000_2_3: 40 cells, 3 positive
+[✓] Lung_26000_38000_3_2: 38 cells, 2 positive
+[✓] Lung_30000_40000_0_1: 58 cells, 6 positive
+[✓] Lung_30000_40000_1_1: 35 cells, 7 positive
+[✓] Lung_26000_32000_3_1: 36 cells, 6 positive
+[✓] Lung_26000_32000_2_2: 46 cells, 1 positive
+[✓] Lung_34000_26000_1_3: 40 cells, 8 positive
+[✓] Lung_26000_38000_3_3: 40 cells, 6 positive
+[✓] Lung_26000_32000_1_3: 47 cells, 9 positive
+[✓] Lung_34000_40000_1_1: 31 cells, 4 positive
+[✓] Lung_28000_22000_2_0: 51 cells, 4 positive
+[✓] Lung_28000_14000_1_1: 31 cells, 5 positive
+[✓] Bladder_38000_40000_1_2: 98 cells, 7 positive
+[✓] Lung_28000_36000_1_3: 46 cells, 3 positive
+[✓] Bladder_48000_62000_1_1: 60 cells, 4 positive
+[✓] Lung_30000_40000_1_2: 36 cells, 1 positive
+[✓] Lung_26000_42000_0_1: 57 cells, 8 positive
+[✓] Lung_28000_34000_1_2: 57 cells, 2 positive
+[✓] Lung_34000_34000_3_0: 44 cells, 8 positive
+[✓] Lung_26000_32000_1_0: 53 cells, 5 positive
+[✓] Lung_34000_40000_1_3: 40 cells, 5 positive
+[✓] Bladder_38000_40000_3_1: 58 cells, 11 positive
+[✓] Lung_36000_38000_3_0: 46 cells, 5 positive
+[✓] Lung_26000_34000_1_1: 50 cells, 3 positive
+[✓] Lung_28000_44000_2_0: 37 cells, 1 positive
+[✓] Lung_30000_40000_3_2: 58 cells, 5 positive
+[✓] Lung_26000_30000_3_0: 68 cells, 8 positive
+[✓] Lung_26000_38000_1_0: 73 cells, 1 positive
+[✓] Bladder_48000_72000_0_0: 55 cells, 15 positive
+[✓] Lung_32000_40000_0_2: 57 cells, 4 positive
+[✓] Lung_28000_28000_1_3: 50 cells, 4 positive
+[✓] Lung_28000_22000_0_1: 59 cells, 11 positive
+[✓] Lung_34000_40000_0_1: 35 cells, 3 positive
+[✓] Lung_26000_30000_0_2: 40 cells, 3 positive
+[✓] Lung_28000_22000_2_1: 47 cells, 7 positive
+[✓] Lung_36000_38000_3_2: 46 cells, 1 positive
+[✓] Lung_36000_38000_1_1: 47 cells, 8 positive
+[✓] Lung_26000_44000_1_0: 48 cells, 4 positive
+[✓] Lung_28000_20000_3_2: 36 cells, 8 positive
+[✓] Lung_28000_14000_3_3: 37 cells, 4 positive
+[✓] Lung_28000_20000_3_0: 41 cells, 3 positive
+[✓] Lung_28000_22000_1_2: 60 cells, 7 positive
+[✓] Lung_36000_34000_3_0: 56 cells, 3 positive
+[✓] Lung_26000_30000_2_2: 42 cells, 2 positive
+[✓] Lung_36000_38000_0_3: 38 cells, 1 positive
+[✓] Lung_26000_36000_2_0: 60 cells, 3 positive
+[✓] Lung_30000_40000_1_0: 59 cells, 7 positive
+[✓] Lung_28000_22000_3_0: 46 cells, 9 positive
+[✓] Bladder_48000_56000_0_1: 99 cells, 4 positive
+[✓] Lung_28000_18000_0_3: 46 cells, 4 positive
+[✓] Lung_28000_26000_2_1: 56 cells, 6 positive
+[✓] Lung_28000_32000_3_2: 50 cells, 3 positive
+[✓] Bladder_38000_38000_0_2: 48 cells, 13 positive
+[✓] Lung_32000_32000_1_0: 47 cells, 8 positive
+[✓] Bladder_38000_42000_3_3: 49 cells, 5 positive
+[✓] Lung_32000_36000_0_1: 54 cells, 8 positive
+[✓] Lung_34000_32000_1_0: 51 cells, 7 positive
+[✓] Lung_28000_16000_1_0: 27 cells, 2 positive
+[✓] Lung_28000_28000_0_1: 57 cells, 6 positive
+[✓] Lung_36000_38000_3_1: 50 cells, 7 positive
+[✓] Lung_30000_40000_0_0: 64 cells, 7 positive
+[✓] Lung_32000_36000_0_3: 49 cells, 9 positive
+[✓] Lung_36000_42000_2_0: 51 cells, 8 positive
+[✓] Lung_32000_32000_0_1: 51 cells, 6 positive
+[✓] Lung_36000_34000_0_3: 61 cells, 6 positive
+[✓] Bladder_38000_46000_2_3: 88 cells, 2 positive
+[✓] Lung_30000_40000_2_3: 68 cells, 3 positive
+[✓] Lung_32000_36000_1_3: 53 cells, 3 positive
+[✓] Lung_26000_34000_1_2: 46 cells, 4 positive
+[✓] Bladder_48000_72000_0_2: 45 cells, 16 positive
+[✓] Lung_28000_14000_1_3: 29 cells, 1 positive
+[✓] Lung_28000_32000_0_3: 37 cells, 5 positive
+[✓] Lung_26000_34000_3_3: 46 cells, 5 positive
+[✓] Lung_28000_34000_1_1: 55 cells, 1 positive
+[✓] Lung_28000_32000_3_1: 51 cells, 7 positive
+[✓] Lung_28000_22000_2_3: 44 cells, 2 positive
+[✓] Lung_28000_16000_1_2: 42 cells, 2 positive
+[✓] Lung_36000_42000_1_2: 37 cells, 2 positive
+[✓] Bladder_48000_68000_2_1: 48 cells, 2 positive
+[✓] Bladder_38000_38000_0_3: 53 cells, 7 positive
+[✓] Lung_26000_40000_3_3: 51 cells, 1 positive
+[✓] Bladder_38000_46000_0_0: 119 cells, 6 positive
+[✓] Lung_28000_28000_3_1: 49 cells, 4 positive
+[✓] Lung_32000_40000_2_2: 71 cells, 6 positive
+[✓] Bladder_48000_74000_1_3: 55 cells, 18 positive
+[✓] Lung_30000_40000_2_2: 64 cells, 5 positive
+[✓] Bladder_48000_62000_3_1: 62 cells, 12 positive
+[✓] Lung_28000_20000_1_3: 45 cells, 8 positive
+[✓] Bladder_48000_62000_3_0: 42 cells, 5 positive
+[✓] Lung_28000_16000_1_3: 42 cells, 5 positive
+[✓] Bladder_48000_56000_3_2: 93 cells, 3 positive
+[✓] Lung_28000_36000_0_2: 58 cells, 5 positive
+[✓] Bladder_48000_74000_0_0: 44 cells, 9 positive
+[✓] Lung_28000_24000_1_2: 52 cells, 8 positive
+[✓] Lung_26000_40000_3_2: 57 cells, 3 positive
+[✓] Lung_28000_20000_1_2: 49 cells, 7 positive
+[✓] Lung_28000_30000_3_2: 39 cells, 1 positive
+[✓] Lung_28000_16000_3_0: 42 cells, 8 positive
+[✓] Bladder_48000_74000_2_0: 59 cells, 5 positive
+[✓] Lung_32000_34000_0_3: 59 cells, 1 positive
+[✓] Lung_26000_42000_2_2: 55 cells, 3 positive
+[✓] Lung_26000_38000_0_0: 65 cells, 1 positive
+[✓] Lung_26000_42000_3_0: 45 cells, 2 positive
+[✓] Lung_34000_32000_3_3: 48 cells, 12 positive
+[✓] Bladder_38000_38000_2_2: 54 cells, 11 positive
+[✓] Lung_32000_40000_2_0: 58 cells, 7 positive
+[✓] Lung_28000_42000_1_3: 65 cells, 10 positive
+[✓] Lung_28000_42000_1_1: 51 cells, 9 positive
+[✓] Lung_34000_40000_0_0: 53 cells, 10 positive
+[✓] Lung_28000_24000_0_3: 42 cells, 5 positive
+[✓] Lung_28000_28000_3_2: 46 cells, 3 positive
+[✓] Lung_26000_42000_0_2: 67 cells, 3 positive
+[✓] Lung_28000_32000_2_1: 42 cells, 2 positive
+[✓] Lung_32000_32000_1_1: 47 cells, 12 positive
+[✓] Lung_36000_38000_2_1: 42 cells, 4 positive
+[✓] Lung_26000_28000_0_2: 54 cells, 4 positive
+[✓] Lung_28000_44000_1_0: 45 cells, 6 positive
+[✓] Lung_28000_26000_3_3: 58 cells, 10 positive
+[✓] Lung_26000_38000_0_3: 64 cells, 12 positive
+[✓] Lung_32000_34000_0_1: 57 cells, 3 positive
+[✓] Lung_26000_30000_0_0: 55 cells, 2 positive
+[✓] Bladder_48000_74000_2_2: 59 cells, 17 positive
+[✓] Lung_28000_36000_0_0: 51 cells, 10 positive
+[✓] Lung_36000_42000_0_3: 41 cells, 6 positive
+[✓] Bladder_38000_40000_2_3: 91 cells, 13 positive
+[✓] Lung_28000_40000_3_3: 58 cells, 5 positive
+[✓] Lung_28000_44000_2_1: 50 cells, 6 positive
+[✓] Lung_26000_28000_1_0: 55 cells, 4 positive
+[✓] Bladder_38000_46000_1_0: 85 cells, 2 positive
+[✓] Lung_26000_28000_1_2: 49 cells, 3 positive
+[✓] Lung_28000_26000_3_1: 46 cells, 5 positive
+[✓] Bladder_48000_74000_0_2: 44 cells, 10 positive
+[✓] Lung_28000_28000_1_2: 55 cells, 3 positive
+[✓] Bladder_38000_42000_0_3: 79 cells, 5 positive
+[✓] Lung_34000_34000_1_2: 53 cells, 5 positive
+[✓] Bladder_48000_56000_2_3: 71 cells, 3 positive
+[✓] Bladder_48000_62000_1_3: 74 cells, 5 positive
+[✓] Bladder_38000_38000_3_0: 48 cells, 3 positive
+[✓] Bladder_48000_56000_0_0: 57 cells, 2 positive
+[✓] Lung_28000_16000_0_3: 57 cells, 5 positive
+[✓] Lung_28000_24000_3_1: 28 cells, 1 positive
+[✓] Lung_28000_26000_2_2: 48 cells, 2 positive
+[✓] Lung_30000_40000_3_0: 49 cells, 4 positive
+[✓] Bladder_48000_72000_1_3: 52 cells, 5 positive
+[✓] Lung_36000_32000_3_2: 59 cells, 15 positive
+[✓] Bladder_48000_74000_3_0: 61 cells, 12 positive
+[✓] Lung_28000_30000_1_1: 51 cells, 6 positive
+[✓] Lung_28000_24000_3_2: 35 cells, 2 positive
+[✓] Lung_26000_32000_3_0: 36 cells, 2 positive
+[✓] Bladder_48000_78000_3_0: 48 cells, 14 positive
+[✓] Bladder_48000_72000_3_0: 45 cells, 15 positive
+[✓] Lung_28000_14000_2_2: 29 cells, 1 positive
+[✓] Bladder_38000_42000_0_1: 69 cells, 4 positive
+[✓] Lung_28000_32000_3_3: 44 cells, 7 positive
+[✓] Bladder_48000_74000_3_1: 57 cells, 12 positive
+[✓] Bladder_48000_56000_1_3: 98 cells, 1 positive
+[✓] Lung_28000_36000_1_2: 63 cells, 6 positive
+[✓] Lung_32000_36000_0_0: 49 cells, 6 positive
+[✓] Lung_32000_36000_2_3: 65 cells, 10 positive
+[✓] Bladder_38000_40000_2_1: 58 cells, 11 positive
+[✓] Lung_28000_14000_0_2: 31 cells, 4 positive
+[✓] Lung_28000_22000_1_3: 45 cells, 7 positive
+[✓] Lung_36000_34000_2_3: 54 cells, 8 positive
+[✓] Bladder_38000_46000_2_0: 69 cells, 1 positive
+[✓] Bladder_38000_40000_0_1: 51 cells, 7 positive
+[✓] Lung_36000_34000_2_0: 67 cells, 4 positive
+[✓] Lung_28000_20000_0_0: 41 cells, 3 positive
+[✓] Lung_28000_18000_2_3: 51 cells, 6 positive
+[✓] Bladder_48000_78000_0_2: 36 cells, 11 positive
+[✓] Lung_30000_40000_1_3: 53 cells, 2 positive
+[✓] Lung_32000_32000_1_3: 46 cells, 2 positive
+[✓] Bladder_48000_72000_2_3: 55 cells, 16 positive
+[✓] Lung_32000_34000_1_2: 53 cells, 3 positive
+[✓] Lung_28000_44000_3_2: 55 cells, 2 positive
+[✓] Lung_36000_42000_0_0: 44 cells, 5 positive
+[✓] Bladder_48000_68000_0_3: 56 cells, 5 positive
+[✓] Lung_34000_26000_3_2: 42 cells, 4 positive
+[✓] Lung_28000_42000_2_1: 43 cells, 3 positive
+[✓] Lung_34000_40000_2_2: 42 cells, 4 positive
+[✓] Lung_32000_40000_1_0: 43 cells, 8 positive
+[✓] Lung_32000_34000_0_2: 54 cells, 2 positive
+[✓] Lung_26000_44000_0_1: 51 cells, 8 positive
+[✓] Lung_26000_40000_0_2: 88 cells, 3 positive
+[✓] Lung_36000_32000_1_0: 51 cells, 3 positive
+[✓] Lung_28000_14000_1_2: 40 cells, 2 positive
+[✓] Lung_28000_36000_1_0: 61 cells, 9 positive
+[✓] Lung_26000_40000_1_2: 57 cells, 4 positive
+[✓] Lung_28000_40000_1_3: 64 cells, 7 positive
+[✓] Lung_26000_28000_0_1: 47 cells, 6 positive
+[✓] Lung_26000_44000_2_1: 50 cells, 8 positive
+[✓] Bladder_38000_40000_3_3: 102 cells, 9 positive
+[✓] Lung_36000_32000_3_0: 58 cells, 8 positive
+[✓] Lung_28000_20000_0_1: 34 cells, 1 positive
+[✓] Lung_28000_34000_2_1: 48 cells, 15 positive
+[✓] Bladder_38000_40000_3_0: 69 cells, 5 positive
+[✓] Bladder_48000_62000_2_0: 75 cells, 5 positive
+[✓] Lung_28000_18000_3_3: 46 cells, 4 positive
+[✓] Lung_28000_22000_1_1: 52 cells, 6 positive
+[✓] Bladder_48000_78000_0_1: 30 cells, 14 positive
+[✓] Lung_26000_30000_0_1: 48 cells, 10 positive
+[✓] Lung_32000_36000_3_0: 62 cells, 1 positive
+[✓] Lung_36000_32000_3_3: 53 cells, 7 positive
+[✓] Lung_28000_30000_0_1: 42 cells, 3 positive
+[✓] Lung_36000_32000_2_1: 50 cells, 5 positive
+[✓] Lung_28000_30000_2_3: 42 cells, 6 positive
+[✓] Lung_28000_44000_1_2: 38 cells, 4 positive
+[✓] Lung_28000_26000_2_0: 43 cells, 8 positive
+[✓] Lung_26000_34000_0_2: 52 cells, 3 positive
+[✓] Lung_26000_40000_1_1: 71 cells, 2 positive
+[✓] Lung_26000_42000_0_0: 46 cells, 2 positive
+[✓] Bladder_48000_68000_1_1: 47 cells, 7 positive
+[✓] Lung_28000_28000_3_0: 42 cells, 10 positive
+[✓] Bladder_38000_42000_3_1: 92 cells, 8 positive
+[✓] Bladder_48000_78000_1_1: 44 cells, 9 positive
+[✓] Lung_28000_30000_0_2: 42 cells, 2 positive
+[✓] Bladder_38000_42000_2_0: 82 cells, 8 positive
+[✓] Lung_26000_30000_2_0: 61 cells, 5 positive
+[✓] Lung_36000_34000_0_2: 52 cells, 5 positive
+[✓] Lung_26000_42000_2_1: 40 cells, 6 positive
+[✓] Lung_28000_28000_0_2: 56 cells, 2 positive
+[✓] Lung_28000_20000_3_1: 48 cells, 2 positive
+[✓] Lung_28000_28000_0_3: 61 cells, 9 positive
+[✓] Lung_26000_32000_1_2: 76 cells, 11 positive
+[✓] Lung_34000_26000_1_1: 42 cells, 4 positive
+[✓] Bladder_38000_42000_0_0: 64 cells, 10 positive
+[✓] Lung_26000_44000_0_3: 46 cells, 6 positive
+[✓] Lung_32000_40000_0_0: 52 cells, 5 positive
+[✓] Bladder_48000_74000_1_2: 50 cells, 18 positive
+[✓] Lung_28000_30000_2_1: 50 cells, 4 positive
+[✓] Lung_28000_40000_2_0: 37 cells, 2 positive
+[✓] Lung_28000_34000_3_2: 47 cells, 4 positive
+[✓] Lung_28000_22000_0_2: 45 cells, 2 positive
+[✓] Lung_26000_36000_1_1: 48 cells, 3 positive
+[✓] Lung_34000_26000_3_1: 37 cells, 4 positive
+[✓] Bladder_48000_62000_0_1: 89 cells, 2 positive
+[✓] Lung_28000_40000_1_1: 46 cells, 8 positive
+[✓] Bladder_38000_40000_2_0: 47 cells, 8 positive
+[✓] Lung_36000_38000_3_3: 39 cells, 4 positive
+[✓] Lung_34000_32000_3_0: 43 cells, 11 positive
+[✓] Lung_26000_44000_0_0: 59 cells, 8 positive
+[✓] Lung_26000_34000_3_2: 49 cells, 10 positive
+[✓] Lung_36000_42000_0_1: 53 cells, 6 positive
+[✓] Lung_32000_40000_0_3: 42 cells, 14 positive
+[✓] Lung_34000_34000_0_3: 40 cells, 7 positive
+[✓] Lung_28000_30000_3_0: 56 cells, 13 positive
+[✓] Lung_34000_26000_0_1: 47 cells, 5 positive
+[✓] Lung_26000_38000_2_3: 54 cells, 3 positive
+[✓] Lung_28000_16000_2_0: 46 cells, 6 positive
+[✓] Lung_28000_40000_0_1: 41 cells, 5 positive
+[✓] Bladder_48000_72000_0_3: 56 cells, 10 positive
+[✓] Lung_32000_40000_3_0: 44 cells, 5 positive
+[✓] Lung_26000_44000_1_2: 35 cells, 2 positive
+[✓] Lung_32000_40000_1_2: 52 cells, 8 positive
+[✓] Lung_34000_32000_1_3: 54 cells, 4 positive
+[✓] Bladder_48000_62000_1_2: 73 cells, 2 positive
+[✓] Lung_34000_34000_2_2: 49 cells, 4 positive
+[✓] Lung_28000_16000_0_2: 40 cells, 9 positive
+[✓] Lung_26000_40000_3_1: 61 cells, 9 positive
+[✓] Lung_34000_26000_1_0: 43 cells, 9 positive
+[✓] Lung_28000_26000_1_0: 46 cells, 13 positive
+[✓] Bladder_38000_42000_1_1: 86 cells, 8 positive
+[✓] Bladder_38000_38000_3_1: 55 cells, 9 positive
+[✓] Lung_28000_22000_0_3: 42 cells, 8 positive
+[✓] Lung_26000_36000_3_2: 54 cells, 4 positive
+[✓] Lung_28000_42000_0_2: 59 cells, 4 positive
+[✓] Lung_26000_34000_0_0: 50 cells, 5 positive
+[✓] Bladder_38000_40000_0_2: 86 cells, 7 positive
+[✓] Lung_34000_40000_3_1: 59 cells, 3 positive
+[✓] Lung_26000_36000_3_3: 59 cells, 8 positive
+[✓] Lung_28000_32000_2_3: 56 cells, 5 positive
+[✓] Lung_26000_30000_0_3: 64 cells, 3 positive
+[✓] Lung_36000_42000_2_2: 77 cells, 14 positive
+[✓] Lung_26000_34000_1_0: 55 cells, 1 positive
+[✓] Bladder_48000_68000_3_1: 61 cells, 4 positive
+[✓] Bladder_38000_46000_1_3: 74 cells, 2 positive
+[✓] Lung_26000_40000_0_1: 52 cells, 1 positive
+[✓] Lung_26000_40000_2_3: 50 cells, 2 positive
+[✓] Lung_26000_38000_3_1: 44 cells, 4 positive
+[✓] Lung_28000_22000_1_0: 65 cells, 8 positive
+[✓] Bladder_48000_62000_2_1: 53 cells, 8 positive
+[✓] Bladder_48000_62000_3_3: 54 cells, 3 positive
+[✓] Bladder_38000_40000_1_1: 63 cells, 2 positive
+[✓] Lung_32000_36000_1_0: 52 cells, 2 positive
+[✓] Lung_36000_38000_0_0: 36 cells, 5 positive
+[✓] Lung_28000_44000_3_3: 59 cells, 4 positive
+[✓] Lung_36000_38000_2_0: 59 cells, 5 positive
+[✓] Lung_28000_18000_0_1: 57 cells, 9 positive
+[✓] Bladder_38000_46000_3_3: 64 cells, 2 positive
+[✓] Lung_28000_26000_2_3: 59 cells, 5 positive
+[✓] Lung_28000_40000_0_0: 46 cells, 2 positive
+[✓] Lung_26000_42000_1_3: 61 cells, 5 positive
+[✓] Lung_28000_18000_3_2: 41 cells, 5 positive
+[✓] Lung_28000_24000_2_0: 30 cells, 6 positive
+[✓] Bladder_38000_38000_2_3: 64 cells, 11 positive
+[✓] Lung_32000_40000_0_1: 72 cells, 3 positive
+[✓] Bladder_48000_72000_1_2: 57 cells, 14 positive
+[✓] Bladder_48000_56000_2_1: 77 cells, 2 positive
+[✓] Bladder_38000_40000_2_2: 65 cells, 5 positive
+[✓] Lung_34000_34000_3_3: 67 cells, 7 positive
+[✓] Lung_36000_42000_2_1: 61 cells, 8 positive
+[✓] Lung_28000_24000_1_3: 46 cells, 4 positive
+[✓] Lung_32000_32000_3_2: 50 cells, 2 positive
+[✓] Lung_32000_32000_2_1: 58 cells, 3 positive
+[✓] Lung_32000_32000_0_3: 30 cells, 1 positive
+[✓] Lung_26000_40000_2_0: 57 cells, 6 positive
+[✓] Bladder_48000_78000_3_3: 50 cells, 14 positive
+[✓] Lung_28000_24000_1_0: 58 cells, 2 positive
+[✓] Lung_26000_38000_0_2: 47 cells, 4 positive
+[✓] Lung_26000_42000_3_3: 47 cells, 4 positive
+[✓] Lung_28000_18000_2_1: 44 cells, 1 positive
+[✓] Bladder_48000_74000_0_1: 37 cells, 5 positive
+[✓] Lung_28000_40000_1_0: 55 cells, 2 positive
+[✓] Lung_28000_28000_2_1: 54 cells, 3 positive
+[✓] Lung_26000_40000_1_0: 58 cells, 5 positive
+[✓] Lung_26000_36000_0_3: 45 cells, 4 positive
+[✓] Bladder_48000_78000_2_2: 59 cells, 20 positive
+[✓] Bladder_48000_74000_1_1: 67 cells, 2 positive
+[✓] Lung_36000_34000_1_1: 58 cells, 5 positive
+[✓] Lung_26000_30000_3_1: 59 cells, 36 positive
+[✓] Bladder_38000_40000_0_0: 66 cells, 11 positive
+[✓] Lung_34000_40000_2_3: 41 cells, 10 positive
+[✓] Lung_26000_36000_0_2: 43 cells, 6 positive
+[✓] Lung_26000_42000_2_3: 41 cells, 14 positive
+[✓] Lung_28000_40000_3_2: 44 cells, 3 positive
+[✓] Lung_26000_40000_2_2: 58 cells, 4 positive
+[✓] Bladder_38000_42000_3_0: 56 cells, 6 positive
+[✓] Lung_28000_26000_0_3: 55 cells, 6 positive
+[✓] Lung_34000_32000_3_2: 39 cells, 7 positive
+[✓] Lung_26000_44000_1_3: 42 cells, 6 positive
+[✓] Bladder_48000_78000_1_3: 37 cells, 8 positive
+[✓] Lung_28000_34000_0_0: 39 cells, 11 positive
+[✓] Lung_34000_26000_2_1: 37 cells, 6 positive
+[✓] Lung_34000_26000_3_0: 48 cells, 9 positive
+[✓] Bladder_38000_40000_1_3: 86 cells, 12 positive
+[✓] Lung_26000_44000_1_1: 53 cells, 4 positive
+[✓] Lung_28000_18000_2_0: 41 cells, 8 positive
+[✓] Bladder_48000_68000_3_3: 52 cells, 17 positive
+[✓] Lung_28000_16000_3_3: 46 cells, 9 positive
+[✓] Bladder_48000_78000_0_3: 38 cells, 9 positive
+[✓] Lung_28000_28000_2_3: 50 cells, 4 positive
+[✓] Lung_34000_40000_2_1: 40 cells, 5 positive
+[✓] Lung_28000_30000_3_3: 54 cells, 5 positive
+[✓] Lung_36000_34000_1_0: 42 cells, 10 positive
+[✓] Lung_26000_30000_1_1: 52 cells, 6 positive
+[✓] Lung_28000_24000_0_0: 56 cells, 8 positive
+[✓] Lung_28000_28000_1_1: 50 cells, 2 positive
+[✓] Lung_28000_36000_2_0: 46 cells, 7 positive
+[✓] Lung_28000_14000_3_2: 49 cells, 6 positive
+[✓] Lung_34000_40000_3_3: 55 cells, 6 positive
+[✓] Bladder_38000_38000_1_2: 54 cells, 9 positive
+[✓] Bladder_48000_68000_0_1: 77 cells, 4 positive
+[✓] Lung_36000_32000_2_3: 49 cells, 5 positive
+[✓] Lung_28000_34000_1_3: 62 cells, 4 positive
+[✓] Lung_28000_34000_0_3: 69 cells, 6 positive
+[✓] Lung_28000_26000_0_1: 45 cells, 8 positive
+[✓] Lung_26000_28000_3_1: 43 cells, 3 positive
+[✓] Bladder_48000_56000_3_0: 56 cells, 3 positive
+[✓] Lung_28000_34000_2_3: 45 cells, 9 positive
+[✓] Lung_36000_42000_3_3: 78 cells, 7 positive
+[✓] Lung_36000_42000_3_1: 46 cells, 8 positive
+[✓] Lung_26000_30000_2_1: 55 cells, 6 positive
+[✓] Lung_32000_34000_3_0: 52 cells, 2 positive
+[✓] Lung_28000_42000_0_0: 55 cells, 3 positive
+[✓] Lung_28000_32000_0_1: 50 cells, 2 positive
+[✓] Lung_36000_42000_0_2: 40 cells, 10 positive
+[✓] Lung_26000_30000_1_2: 47 cells, 13 positive
+[✓] Lung_34000_40000_3_2: 55 cells, 10 positive
+[✓] Lung_26000_34000_3_0: 61 cells, 8 positive
+[✓] Bladder_48000_68000_1_0: 39 cells, 2 positive
+[✓] Lung_28000_18000_0_2: 60 cells, 9 positive
+[✓] Lung_28000_28000_0_0: 55 cells, 5 positive
+[✓] Lung_32000_34000_3_2: 67 cells, 6 positive
+[✓] Lung_28000_26000_1_1: 56 cells, 8 positive
+[✓] Bladder_38000_46000_0_1: 91 cells, 6 positive
+[✓] Lung_28000_14000_3_1: 60 cells, 6 positive
+[✓] Lung_32000_36000_2_0: 48 cells, 6 positive
+[✓] Lung_32000_34000_1_0: 49 cells, 4 positive
+[✓] Lung_28000_36000_1_1: 64 cells, 3 positive
+[✓] Lung_36000_34000_1_3: 59 cells, 17 positive
+[✓] Lung_26000_36000_3_1: 65 cells, 4 positive
+[✓] Lung_28000_40000_0_3: 63 cells, 6 positive
+[✓] Lung_32000_32000_3_1: 49 cells, 4 positive
+[✓] Lung_28000_24000_0_1: 43 cells, 10 positive
+[✓] Lung_36000_34000_3_1: 55 cells, 8 positive
+[✓] Bladder_38000_46000_3_1: 48 cells, 1 positive
+[✓] Lung_34000_34000_1_1: 49 cells, 4 positive
+[✓] Lung_32000_40000_3_3: 39 cells, 3 positive
+[✓] Lung_28000_42000_3_1: 37 cells, 4 positive
+[✓] Lung_30000_40000_3_3: 67 cells, 4 positive
+[✓] Bladder_38000_46000_1_1: 84 cells, 7 positive
+[✓] Lung_36000_38000_2_2: 48 cells, 7 positive
+[✓] Lung_34000_34000_3_2: 56 cells, 3 positive
+[✓] Lung_26000_36000_0_1: 38 cells, 5 positive
+[✓] Lung_34000_26000_0_2: 64 cells, 5 positive
+[✓] Lung_32000_40000_1_3: 51 cells, 7 positive
+[✓] Lung_36000_34000_3_3: 76 cells, 3 positive
+[✓] Lung_36000_42000_2_3: 58 cells, 5 positive
+[✓] Lung_28000_42000_3_0: 60 cells, 4 positive
+[✓] Lung_26000_38000_2_1: 62 cells, 1 positive
+[✓] Lung_28000_24000_2_3: 31 cells, 2 positive
+[✓] Bladder_48000_68000_3_0: 49 cells, 15 positive
+[✓] Lung_36000_34000_2_1: 69 cells, 7 positive
+[✓] Lung_28000_26000_3_0: 40 cells, 6 positive
+[✓] Lung_32000_32000_1_2: 49 cells, 5 positive
+[✓] Lung_34000_26000_2_3: 40 cells, 9 positive
+[✓] Lung_26000_42000_0_3: 55 cells, 3 positive
+[✓] Lung_30000_40000_2_0: 56 cells, 2 positive
+[✓] Lung_28000_20000_3_3: 37 cells, 5 positive
+[✓] Bladder_48000_62000_0_0: 69 cells, 1 positive
+[✓] Lung_26000_44000_3_1: 52 cells, 5 positive
+[✓] Lung_28000_18000_3_0: 51 cells, 5 positive
+[✓] Bladder_48000_62000_0_2: 91 cells, 2 positive
+[✓] Lung_32000_34000_3_3: 52 cells, 6 positive
+[✓] Lung_28000_28000_3_3: 52 cells, 4 positive
+[✓] Lung_28000_14000_0_3: 12 cells, 3 positive
+[✓] Lung_26000_28000_2_2: 41 cells, 6 positive
+[✓] Lung_28000_20000_2_2: 42 cells, 1 positive
+[✓] Bladder_48000_68000_0_0: 51 cells, 11 positive
+[✓] Lung_26000_32000_2_3: 54 cells, 6 positive
+[✓] Lung_34000_32000_2_2: 55 cells, 7 positive
+[✓] Lung_28000_34000_3_1: 44 cells, 2 positive
+[✓] Lung_34000_26000_2_2: 42 cells, 3 positive
+[✓] Lung_36000_32000_0_3: 44 cells, 1 positive
+[✓] Bladder_48000_56000_0_3: 99 cells, 2 positive
+[✓] Lung_26000_38000_2_0: 64 cells, 1 positive
+[✓] Lung_28000_36000_3_2: 56 cells, 8 positive
+[✓] Bladder_48000_72000_1_1: 45 cells, 18 positive
+[✓] Lung_36000_34000_2_2: 47 cells, 2 positive
+[✓] Lung_28000_22000_2_2: 41 cells, 4 positive
+[✓] Lung_34000_32000_1_1: 35 cells, 6 positive
+[✓] Lung_32000_40000_1_1: 57 cells, 7 positive
+[✓] Lung_28000_16000_3_2: 51 cells, 16 positive
+[✓] Lung_28000_44000_3_1: 53 cells, 1 positive
+[✓] Lung_26000_40000_3_0: 47 cells, 3 positive
+[✓] Lung_28000_26000_1_3: 39 cells, 4 positive
+[✓] Lung_34000_32000_0_3: 47 cells, 6 positive
+[✓] Lung_28000_20000_0_3: 56 cells, 6 positive
+[✓] Lung_26000_40000_0_0: 65 cells, 2 positive
+[✓] Lung_28000_32000_1_3: 42 cells, 7 positive
+[✓] Lung_28000_44000_0_3: 54 cells, 5 positive
+[✓] Lung_34000_32000_2_0: 39 cells, 4 positive
+[✓] Lung_26000_42000_1_2: 59 cells, 2 positive
+[✓] Lung_26000_44000_3_0: 55 cells, 7 positive
+[✓] Lung_28000_26000_0_2: 45 cells, 10 positive
+[✓] Lung_28000_16000_2_3: 57 cells, 12 positive
+[✓] Lung_28000_42000_3_3: 43 cells, 9 positive
+[✓] Lung_28000_22000_0_0: 55 cells, 6 positive
+[✓] Lung_28000_36000_0_3: 58 cells, 5 positive
+[✓] Lung_32000_40000_3_2: 75 cells, 3 positive
+[✓] Bladder_38000_40000_0_3: 85 cells, 10 positive
+[✓] Lung_28000_30000_1_2: 38 cells, 2 positive
+[✓] Lung_28000_16000_3_1: 41 cells, 6 positive
+[✓] Lung_34000_32000_0_0: 56 cells, 7 positive
+[✓] Lung_26000_32000_0_0: 46 cells, 2 positive
+[✓] Lung_34000_34000_2_1: 45 cells, 4 positive
+[✓] Bladder_48000_78000_1_0: 38 cells, 13 positive
+[✓] Lung_26000_30000_3_3: 46 cells, 1 positive
+[✓] Lung_26000_34000_0_1: 44 cells, 5 positive
+[✓] Lung_28000_34000_1_0: 47 cells, 4 positive
+[✓] Lung_36000_38000_1_2: 37 cells, 5 positive
+[✓] Bladder_38000_46000_2_2: 70 cells, 6 positive
+[✓] Lung_26000_36000_2_3: 60 cells, 12 positive
+[✓] Lung_26000_38000_0_1: 49 cells, 2 positive
+[✓] Lung_36000_32000_2_0: 53 cells, 1 positive
+[✓] Lung_26000_44000_0_2: 46 cells, 4 positive
+[✓] Bladder_48000_74000_1_0: 54 cells, 5 positive
+[✓] Bladder_48000_68000_2_0: 37 cells, 7 positive
+[✓] Lung_26000_36000_0_0: 41 cells, 1 positive
+[✓] Lung_32000_40000_2_1: 48 cells, 3 positive
+[✓] Bladder_48000_56000_0_2: 113 cells, 2 positive
+[✓] Lung_28000_34000_2_0: 30 cells, 1 positive
+[✓] Lung_36000_38000_0_2: 33 cells, 1 positive
+[✓] Lung_26000_32000_0_2: 61 cells, 17 positive
+[✓] Lung_28000_28000_1_0: 52 cells, 6 positive
+[✓] Lung_28000_32000_1_1: 48 cells, 5 positive
+[✓] Lung_28000_16000_0_0: 37 cells, 3 positive
+[✓] Lung_34000_32000_0_2: 47 cells, 5 positive
+[✓] Lung_28000_44000_0_2: 45 cells, 4 positive
+[✓] Lung_32000_32000_2_0: 47 cells, 4 positive
+[✓] Lung_34000_26000_2_0: 54 cells, 4 positive
+[✓] Bladder_38000_46000_0_2: 58 cells, 1 positive
+[✓] Bladder_48000_78000_2_1: 42 cells, 15 positive
+[✓] Lung_26000_34000_2_1: 47 cells, 4 positive
+[✓] Bladder_48000_56000_2_0: 72 cells, 2 positive
+[✓] Lung_26000_28000_1_3: 48 cells, 1 positive
+[✓] Lung_28000_24000_3_3: 38 cells, 3 positive
+[✓] Bladder_48000_72000_3_3: 54 cells, 16 positive
+[✓] Bladder_38000_46000_2_1: 74 cells, 2 positive
+[✓] Lung_32000_32000_2_2: 48 cells, 1 positive
+[✓] Lung_28000_28000_2_2: 53 cells, 3 positive
+[✓] Lung_28000_30000_1_3: 53 cells, 4 positive
+[✓] Lung_26000_30000_1_3: 48 cells, 3 positive
+[✓] Lung_28000_30000_3_1: 35 cells, 3 positive
+[✓] Lung_26000_28000_0_0: 53 cells, 8 positive
+[✓] Lung_28000_20000_2_3: 43 cells, 4 positive
+[✓] Lung_36000_32000_0_1: 46 cells, 8 positive
+[✓] Lung_30000_40000_3_1: 53 cells, 4 positive
+[✓] Lung_28000_18000_2_2: 59 cells, 5 positive
+[✓] Lung_34000_34000_0_0: 52 cells, 4 positive
+[✓] Lung_36000_32000_3_1: 55 cells, 5 positive
+[✓] Lung_26000_42000_3_2: 50 cells, 8 positive
+[✓] Lung_32000_36000_1_1: 55 cells, 5 positive
+[✓] Lung_32000_36000_0_2: 46 cells, 7 positive
+[✓] Lung_34000_26000_0_0: 44 cells, 5 positive
+[✓] Lung_28000_44000_2_3: 34 cells, 2 positive
+All
+Search & pair in: /home/yang/Desktop/Model_Nov12th.3/Model/Dataset_pred_guava_deepliif_seed42_clean_eval200/test_latest/images
+Total paired images: 2392
+[B_1] pairs: 598
+[B_2] pairs: 598
+[B_3] pairs: 598
+[B_4] pairs: 598
+SSIM average per type: defaultdict(<class 'float'>, {'B_1': 0.45927554716102087, 'B_2': 0.7305651275161603, 'B_3': 0.6827562312850247, 'B_4': 0.8590915496328939})
+MSE average per type: defaultdict(<class 'float'>, {'B_1': 0.007359548560050904, 'B_2': 0.007893052791764183, 'B_3': 0.004459997552584666, 'B_4': 0.001191550070501323})
+SSIM Computed
+100 50
+Writing in csv
+precision 71.58990634976153
+recall 81.25948559871038
+f1 75.93879060588846
+Dice 75.938795573774
+IOU 61.6782107947007
+PixAcc 88.64120432362263
+AJI 46.023394362068
+AJI_positive 51.14559853635859
+AJI_negative 40.901190187777324
+-------------------------------------------------------
+Writing in csv
+Writing in csv
+Diff_IHC_Score: 8.5071240929619
+-------------------------------------------------------
+[✓] Lung_36000_32000_1_2: 37 cells, 5 positive
+[✓] Bladder_38000_42000_1_2: 103 cells, 8 positive
+[✓] Lung_28000_36000_2_3: 53 cells, 3 positive
+[✓] Bladder_48000_56000_2_2: 61 cells, 5 positive
+[✓] Lung_28000_14000_2_1: 55 cells, 1 positive
+[✓] Lung_28000_36000_2_1: 32 cells, 7 positive
+[✓] Bladder_48000_72000_2_1: 42 cells, 14 positive
+[✓] Lung_28000_40000_1_2: 54 cells, 2 positive
+[✓] Bladder_38000_38000_1_0: 52 cells, 7 positive
+[✓] Bladder_38000_42000_1_3: 77 cells, 8 positive
+[✓] Bladder_48000_78000_3_1: 50 cells, 12 positive
+[✓] Bladder_38000_46000_3_2: 77 cells, 3 positive
+[✓] Lung_26000_32000_3_3: 60 cells, 9 positive
+[✓] Lung_28000_42000_2_0: 69 cells, 3 positive
+[✓] Lung_32000_34000_2_1: 55 cells, 4 positive
+[✓] Lung_36000_42000_1_1: 49 cells, 9 positive
+[✓] Lung_36000_34000_0_0: 47 cells, 9 positive
+[✓] Lung_28000_32000_0_0: 35 cells, 2 positive
+[✓] Lung_28000_40000_2_2: 44 cells, 5 positive
+[✓] Lung_28000_24000_1_1: 49 cells, 4 positive
+[✓] Lung_26000_28000_3_2: 49 cells, 4 positive
+[✓] Bladder_38000_42000_0_2: 81 cells, 5 positive
+[✓] Lung_36000_38000_1_3: 37 cells, 3 positive
+[✓] Bladder_48000_68000_0_2: 51 cells, 6 positive
+[✓] Lung_26000_42000_3_1: 61 cells, 1 positive
+[✓] Lung_26000_32000_2_0: 47 cells, 2 positive
+[✓] Lung_28000_18000_1_2: 57 cells, 4 positive
+[✓] Lung_28000_20000_1_0: 36 cells, 7 positive
+[✓] Lung_34000_40000_2_0: 56 cells, 8 positive
+[✓] Lung_28000_16000_0_1: 25 cells, 3 positive
+[✓] Lung_26000_34000_0_3: 46 cells, 3 positive
+[✓] Lung_34000_32000_2_1: 46 cells, 8 positive
+[✓] Lung_26000_42000_2_0: 49 cells, 4 positive
+[✓] Lung_28000_14000_0_0: 46 cells, 8 positive
+✅ 文件分类完成。

@@ -1,0 +1,224 @@
+/home/yang/anaconda3/envs/deepliif_env/lib/python3.9/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.8 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+organize weights: done
+----------------- Options ---------------
+             aspect_ratio: 1.0                           
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: ./checkpoints/guava_bc_seed2026_eval200/latest
+           continue_train: False                         
+                crop_size: 512                           
+                 dataroot: /home/yang/Desktop/Model_Nov12th.3/Model/Dataset
+             dataset_mode: aligned                       
+                    debug: False                         
+          debug_data_size: 10                            
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: -1                            
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 512                           
+                    epoch: latest                        
+              epoch_count: 0                             
+                 gan_mode: vanilla                       
+               gan_mode_s: lsgan                         
+                  gpu_ids: (0,)                          
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                 input_no: 1                             
+                 is_train: False                         
+          label_smoothing: 0.0                           
+                lambda_L1: 100                           
+              lambda_feat: 100                           
+          lambda_identity: 0                             
+                lambda_l1: 100.0                         
+                load_iter: 0                             
+                load_size: 512                           
+               local_rank: -1                            
+           loss_D_weights: [0.25, 0.25, 0.25, 0.25]      
+           loss_G_weights: [0.25, 0.25, 0.25, 0.25]      
+           loss_weights_d:                               
+           loss_weights_g:                               
+                     lr_d: 0.0002                        
+           lr_decay_iters: 50                            
+                     lr_g: 0.0002                        
+                lr_policy: linear                        
+         max_dataset_size: None                          
+            modalities_no: 4                             
+                    model: ParsiLIF                      
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+               n_layers_D: 4                             
+               n_layers_d: 4                             
+                     name: .                             
+                      ndf: 32                            
+                     netD: n_layers                      
+                     netG: ['resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks']
+                    net_d: n_layers                      
+                   net_ds: n_layers                      
+                    net_g: ['resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks']
+                   net_gs: ['unet_512', 'unet_512', 'unet_512', 'unet_512', 'unet_512']
+                      ngf: 32                            
+               no_dropout: False                         
+                  no_flip: True                          
+                  no_html: True                          
+                     norm: batch                         
+                 num_test: 66                            
+              num_threads: 0                             
+                optimizer: adam                          
+                output_nc: 3                             
+                  padding: zero                          
+                    phase: test                          
+                pool_size: 0                             
+              prep_config: {'seg_no': 1, 'seg_gen': True, 'gpu_ids': [0], 'local_rank': -1, 'padding': 'zero', 'input_no': 1, 'scale_size': 512, 'pool_size': 0, 'net_g': ['resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks', 'resnet_9blocks'], 'net_gs': ['unet_512', 'unet_512', 'unet_512', 'unet_512', 'unet_512'], 'seg_weights': [0.25, 0.25, 0.25, 0.25], 'loss_G_weights': [0.25, 0.25, 0.25, 0.25], 'loss_D_weights': [0.25, 0.25, 0.25, 0.25], 'lambda_identity': 0}
+               preprocess: None                          
+               print_freq: 50                            
+                   remote: False                         
+      remote_transfer_cmd: None                          
+              results_dir: /home/yang/Desktop/Model_Nov12th.3/Model/Dataset_pred_guava_bc_seed2026_eval200
+             save_by_iter: False                         
+          save_epoch_freq: 10                            
+         save_latest_freq: 500                           
+               scale_size: 512                           
+                     seed: 2026                          
+                  seg_gen: True                          
+                   seg_no: 1                             
+              seg_weights: [0.25, 0.25, 0.25, 0.25]      
+                  seghead: unet_swt                      
+           serial_batches: True                          
+         update_html_freq: 50                            
+                 upsample: convtranspose                 
+                   use_dp: True                          
+              use_dropout: False                         
+                  verbose: False                         
+                 with_val: False                         
+----------------- End -------------------
+dataset [AlignedDataset] was created
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+model [ParsiLIFModel] was created
+loading the model from ./checkpoints/guava_bc_seed2026_eval200/latest/./latest_net_G1.pth
+loading the model from ./checkpoints/guava_bc_seed2026_eval200/latest/./latest_net_G2.pth
+loading the model from ./checkpoints/guava_bc_seed2026_eval200/latest/./latest_net_G3.pth
+loading the model from ./checkpoints/guava_bc_seed2026_eval200/latest/./latest_net_G4.pth
+loading the model from ./checkpoints/guava_bc_seed2026_eval200/latest/./latest_net_S.pth
+---------- Networks initialized -------------
+[Network G1] Total number of parameters : 1.967 M
+[Network G2] Total number of parameters : 1.967 M
+[Network G3] Total number of parameters : 1.967 M
+[Network G4] Total number of parameters : 1.967 M
+[Network S] Total number of parameters : 6.759 M
+-----------------------------------------------
+creating web directory /home/yang/Desktop/Model_Nov12th.3/Model/Dataset_pred_guava_bc_seed2026_eval200/./test_latest
+processing (0000)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/22.png']
+processing (0005)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/22_4.png']
+processing (0010)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/22_9.png']
+processing (0015)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/28_3.png']
+processing (0020)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/28_8.png']
+processing (0025)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/31_2.png']
+processing (0030)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/31_7.png']
+processing (0035)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/326_1.png']
+processing (0040)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/326_6.png']
+processing (0045)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/40_0.png']
+All
+Search & pair in: /home/yang/Desktop/Model_Nov12th.3/Model/Dataset_pred_guava_bc_seed2026_eval200/test_latest/images
+Total paired images: 264
+[B_1] pairs: 66
+[B_2] pairs: 66
+[B_3] pairs: 66
+[B_4] pairs: 66
+SSIM average per type: defaultdict(<class 'float'>, {'B_1': 0.6119587211567961, 'B_2': 0.7798435613309157, 'B_3': 0.6631586284619959, 'B_4': 0.8541334145555756})
+MSE average per type: defaultdict(<class 'float'>, {'B_1': 0.0030014358065468213, 'B_2': 0.004442272020876344, 'B_3': 0.004200469371430375, 'B_4': 0.0021491209601121174})
+SSIM Computed
+100 50
+Writing in csv
+precision 79.33974723524345
+recall 75.87028835721803
+f1 76.82574475945634
+Dice 76.82574970956614
+IOU 62.756840417197026
+PixAcc 93.06115237145774
+AJI 60.30487106486304
+AJI_positive 69.73144379473688
+AJI_negative 50.87829833498919
+-------------------------------------------------------
+Writing in csv
+Writing in csv
+Diff_IHC_Score: 14.899544979790827
+-------------------------------------------------------
+processing (0050)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/40_5.png']
+processing (0055)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/7.png']
+processing (0060)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/7_4.png']
+processing (0065)-th image... ['/home/yang/Desktop/Model_Nov12th.3/Model/Dataset/test/7_9.png']
+[✓] 28_6: 114 cells, 15 positive
+[✓] 28_9: 153 cells, 10 positive
+[✓] 22_0: 171 cells, 5 positive
+[✓] 40_8: 141 cells, 25 positive
+[✓] 31_9: 182 cells, 8 positive
+[✓] 22_5: 129 cells, 6 positive
+[✓] 28_2: 130 cells, 14 positive
+[✓] 28_0: 165 cells, 11 positive
+[✓] 31_4: 185 cells, 10 positive
+[✓] 28_1: 158 cells, 13 positive
+[✓] 40: 175 cells, 24 positive
+[✓] 28: 171 cells, 13 positive
+[✓] 22_8: 165 cells, 6 positive
+[✓] 40_0: 112 cells, 30 positive
+[✓] 31_3: 104 cells, 4 positive
+[✓] 40_4: 165 cells, 15 positive
+[✓] 28_7: 146 cells, 14 positive
+[✓] 7_1: 205 cells, 28 positive
+[✓] 31_6: 143 cells, 5 positive
+[✓] 31_7: 178 cells, 11 positive
+[✓] 31_2: 154 cells, 5 positive
+[✓] 40_1: 152 cells, 14 positive
+[✓] 40_7: 166 cells, 24 positive
+[✓] 7_0: 235 cells, 30 positive
+[✓] 326_4: 101 cells, 6 positive
+[✓] 7_8: 199 cells, 26 positive
+[✓] 7_3: 222 cells, 33 positive
+[✓] 22_2: 169 cells, 7 positive
+[✓] 7_7: 205 cells, 30 positive
+[✓] 22_9: 151 cells, 7 positive
+[✓] 7_6: 221 cells, 31 positive
+[✓] 7: 214 cells, 28 positive
+[✓] 40_5: 153 cells, 15 positive
+[✓] 326_8: 104 cells, 7 positive
+[✓] 28_3: 134 cells, 15 positive
+[✓] 326_5: 93 cells, 6 positive
+[✓] 40_3: 153 cells, 19 positive
+[✓] 326_3: 108 cells, 7 positive
+[✓] 22: 169 cells, 7 positive
+[✓] 7_5: 225 cells, 33 positive
+[✓] 31_1: 159 cells, 6 positive
+[✓] 22_7: 177 cells, 7 positive
+[✓] 31_5: 171 cells, 8 positive
+[✓] 326_9: 110 cells, 7 positive
+[✓] 7_4: 222 cells, 34 positive
+[✓] 40_9: 157 cells, 14 positive
+[✓] 326: 99 cells, 6 positive
+[✓] 326_7: 132 cells, 7 positive
+[✓] 22_4: 166 cells, 5 positive
+[✓] 28_4: 162 cells, 12 positive
+[✓] 326_2: 80 cells, 4 positive
+[✓] 326_1: 99 cells, 7 positive
+[✓] 326_6: 91 cells, 4 positive
+[✓] 7_2: 217 cells, 30 positive
+[✓] 28_8: 148 cells, 14 positive
+[✓] 22_1: 177 cells, 4 positive
+[✓] 7_9: 227 cells, 34 positive
+[✓] 31: 185 cells, 11 positive
+[✓] 28_5: 119 cells, 11 positive
+[✓] 326_0: 103 cells, 6 positive
+[✓] 22_6: 153 cells, 8 positive
+[✓] 40_6: 124 cells, 14 positive
+[✓] 22_3: 169 cells, 6 positive
+[✓] 31_8: 127 cells, 4 positive
+[✓] 40_2: 134 cells, 28 positive
+[✓] 31_0: 193 cells, 11 positive
+✅ 文件分类完成。
