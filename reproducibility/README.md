@@ -5,12 +5,15 @@ This directory contains the reproducibility records for the independently seeded
 ## Contents
 
 - `seed_results.csv`: per-seed evaluation metrics for BCData and DeepLIIF. Values are represented on the `[0,1]` scale.
+- `split_manifests/`: exact filenames and experimental assignments for both datasets.
 - `train_configs/`: saved training-option files for seeds 42, 123, and 2026 on each dataset.
 - `test_logs/`: console logs produced by evaluating the prespecified epoch-200 checkpoints.
 
 ## Experimental protocol
 
 For each dataset, the model was independently trained from scratch with seeds 42, 123, and 2026. Hyperparameters and the epoch-200 checkpoint were specified before evaluation. The held-out evaluation images were not used for hyperparameter tuning, early stopping, or checkpoint selection.
+
+For BCData, all 385 files from the processed BC-DeepLIIF training release were used for training, and all 66 files from its original validation release were reserved as the held-out evaluation set. For DeepLIIF, all 575 official training files were used for optimization, the 91 official validation files were not used, and all 598 official test files were used only for final evaluation.
 
 The manuscript reports the arithmetic mean and sample standard deviation across the three runs. The run-directory suffixes such as `clean` and `clean2` are local bookkeeping labels and do not denote different model or evaluation settings.
 
