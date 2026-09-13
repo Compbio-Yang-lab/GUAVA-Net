@@ -1,5 +1,6 @@
 """This module contains simple helper functions """
 import os
+import random
 from time import time
 from functools import wraps
 
